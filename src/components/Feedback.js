@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Card, Image, Row, Col, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Feedback.css'; // Ensure this file exists and is imported
 
 const testimonials = [
+  // ... (your testimonials array remains the same) ...
   {
     name: "Michael Donovan",
     title: "PATIENT one ",
@@ -49,27 +51,42 @@ const Feedback = () => {
   const renderCards = () => {
     const items = [];
 
-    for (let i = -1; i <= 1; i++) {
+    // Determine which cards to render based on screen size (for initial render)
+    // For more robust responsiveness, consider using a custom hook or event listener for window.innerWidth
+    const isMobileView = window.innerWidth <= 768; // Define your mobile breakpoint here
+
+    // On mobile, only render the center card
+    // On larger screens, render all three (left, center, right)
+    const cardRenderIndices = isMobileView ? [0] : [-1, 0, 1];
+
+    for (let i of cardRenderIndices) {
       let index = (activeIndex + i + testimonials.length) % testimonials.length;
       const isCenter = i === 0;
+
       items.push(
-        <Col key={index} className="d-flex justify-content-center">
+        <Col
+          key={index}
+          // Hide side cards on small screens, show only center card
+          className={`d-flex justify-content-center ${!isCenter ? 'd-none d-md-block' : ''}`}
+          // *** ADJUSTED COL SIZING FOR NORMAL VIEW ***
+          xs={12} // Mobile: full width
+          sm={10} // Small screens: 10/12 width (to give some side padding)
+          md={4} // Medium screens and up: EACH card takes 4/12 of the row
+          lg={4} // Large screens and up: EACH card takes 4/12 of the row
+        >
           <Card
-            className={`text-white ${
-              isCenter ? "bg-primary large-square" : "bg-secondary small-square"
-            } text-center shadow rounded-4`}
-            style={{
-              width: isCenter ? "300px" : "200px",
-              minHeight: isCenter ? "350px" : "280px",
-              transition: "all 0.3s ease",
-            }}
+            // Changed card classes for more consistent styling across all 3 cards
+            className={`text-white text-center shadow rounded-4 feedback-card ${
+              isCenter ? "bg-primary active-feedback-card" : "bg-secondary"
+            }`}
+            style={{ transition: "all 0.3s ease" }}
           >
             <Card.Body>
               <Image
                 src={testimonials[index].image}
                 roundedCircle
-                width={isCenter ? 80 : 50}
-                height={isCenter ? 80 : 50}
+                width={isCenter ? 80 : 80} // Set both to 80 for consistent image size
+                height={isCenter ? 80 : 80} // Set both to 80 for consistent image size
                 className="mb-2"
               />
               <h6>{testimonials[index].name}</h6>
@@ -80,66 +97,39 @@ const Feedback = () => {
         </Col>
       );
     }
-
     return items;
   };
 
   return (
-    <div className="text-center my-5 position-relative">
+    <div className="text-center my-5 position-relative feedback-carousel-container">
       <h4 className="mb-4">What Our Patients Say</h4>
       <Row className="justify-content-center align-items-center">{renderCards()}</Row>
 
-      {/* Arrows */}
+      {/* Arrows (unchanged) */}
       <Button
         variant="light"
         onClick={handlePrev}
-        className="position-absolute top-50 start-0 translate-middle-y"
-        style= {{borderRadius: "50%",
-          fontSize: "2.5rem",
-    width: "70px",
-    height: "70px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-
-        }}
+        className="position-absolute top-50 start-0 translate-middle-y feedback-arrow feedback-arrow-left"
       >
         &#8592;
       </Button>
       <Button
         variant="light"
         onClick={handleNext}
-        className="position-absolute top-50 end-0 translate-middle-y"
-        style={{ borderRadius: "50%",
-
-    fontSize: "3rem", // Increased size
-    width: "60px",
-    height: "60px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-         }}
+        className="position-absolute top-50 end-0 translate-middle-y feedback-arrow feedback-arrow-right"
       >
         &#8594;
       </Button>
 
-
-
-      {/* Dots */}
+      {/* Dots (unchanged) */}
       <div className="d-flex justify-content-center mt-3 gap-2">
         {testimonials.map((_, index) => (
           <span
             key={index}
             onClick={() => setActiveIndex(index)}
+            className="feedback-dot"
             style={{
-              width: "12px",
-              height: "12px",
-              borderRadius: "50%",
               backgroundColor: index === activeIndex ? "#007bff" : "#ccc",
-              cursor: "pointer",
-              display: "inline-block",
             }}
           ></span>
         ))}
