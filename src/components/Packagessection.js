@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Don't forget to import Bootstrap CSS
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
 function Packagessection() {
   return (
     <div className="packages">
@@ -18,6 +18,7 @@ function Packagessection() {
           <Card>
             
             <Card.Body>
+     
               <Card.Title style={{backgroundColor:"#ffff00"}}>Basic HealthKure Check </Card.Title>
               <Card.Title style={{backgroundColor:"#ffff00",paddingLeft:"55px",marginTop:"-11px"}} >46 Tests</Card.Title>
               <Card.Text>
@@ -33,6 +34,7 @@ function Packagessection() {
                </div>
               </Card.Text>
               <Button variant="primary">Book Now</Button>
+         
             </Card.Body>
           </Card>
         </Col>
@@ -91,7 +93,7 @@ function Packagessection() {
         <Col xs={12} sm={6} md={4} lg={3} className="mb-4">
           <Card>
            
-            <Card.Body>
+            <Card.Body style={{backgroundColor:"#ffff00,#d9ee1f"}}>
             <Card.Title style={{backgroundColor:"#ffff00"}}>DIAMOND HealthKure Check </Card.Title>
               <Card.Title style={{backgroundColor:"#ffff00",paddingLeft:"55px",marginTop:"-11px"}} >62 Tests</Card.Title>
               <Card.Text>

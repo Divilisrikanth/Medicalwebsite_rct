@@ -1,0 +1,99 @@
+/* Feedback.css */
+
+/* --- Base Card Sizing and Styling --- */
+.feedback-card {
+    width: 100%; /* Card takes full width of its Bootstrap Col */
+    max-width: 300px; /* Adjust this value to control the max width of a single card */
+    min-height: 280px; /* Minimum height for all cards on larger screens */
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    margin-bottom: 20px; /* Add some space if cards stack on smaller screens */
+    transition: all 0.3s ease; /* Smooth transition for hover effects or sizing changes */
+  }
+  
+  /* Specific styling for the active (center) card, if you still want a visual difference */
+  .active-feedback-card {
+    background-color: #007bff !important; /* Example: make active card primary blue */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important; /* Slightly more pronounced shadow */
+  }
+  
+  /* Ensure images are consistent */
+  .feedback-card img {
+    object-fit: cover; /* Prevents image distortion */
+  }
+  
+  
+  /* --- Arrows and Dots Styling (keep as is or adjust as needed) --- */
+  .feedback-arrow {
+    border-radius: 50%;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+  
+  .feedback-arrow-left {
+    left: 0;
+  }
+  
+  .feedback-arrow-right {
+    right: 0;
+  }
+  
+  .feedback-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* --- Media Queries for Mobile View --- */
+  @media (max-width: 767.98px) { /* Bootstrap's 'md' breakpoint for smaller devices */
+    .feedback-card {
+        width: 650px;
+        height: 780px;
+    }
+  
+    /* Arrows positioning for mobile */
+    .feedback-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      top: 50%;
+    }
+  
+    .feedback-arrow-left {
+      left: 10px;
+    }
+  
+    .feedback-arrow-right {
+      right: 10px;
+    }
+  
+    /* Adjust dot spacing for very small screens if needed */
+    .feedback-dots-container {
+      gap: 8px;
+    }
+  }
+  
+  /* Optional: Further refinement for extremely small screens */
+  @media (max-width: 420px) {
+    .feedback-card {
+      min-height: 200px; /* Even smaller min-height for very small phones */
+      font-size: 0.9em; /* Reduce font size */
+    }
+  
+    .feedback-arrow {
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+  }

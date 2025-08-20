@@ -2,55 +2,373 @@
   margin: 0px;
   box-sizing: border-box;
 }
-#Mainlogo{
-  width:180px;
-  height:58.13px;
-  padding: 5px;
+/* This part of css is for main logo*/
+#mainlogo{
+  width:150px;
+  height:80px;
 }
-#hrosctimg{
-  width: 580px;
-  height:950px;
- ;
+/*This is for faBars icon it will be displayed in mobile view on right side */
+.mobileresponsivenavbaricon{
+  display: none;
 }
-.packages{
-  margin-top: 600px;
-}
-.dffpckg{
+/* This part of css is for log logo phonenumber and email section top of navbar*/
+.sectionfirstone{
+  margin-left: 55px;
+  margin-right: 55px;
+  width: 1200px;
+  height:60px;
+  background-color :#ffffff;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+ 
+
 }
+/* This part of css is for navbar outside stying*/
+.headersectionsecondone{
+  margin-left: 40px;
+  margin-right: 20px;
+  width: 1200px;
+  height:100px;
+  background-color :#33adff;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+
+}
+/* this part of css navbar inside Styling for your general header structure (if not already present) */
+/* If your hero section starts immediately after this, you might need to adjust */
+.headersectionsecondone {
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; 
+}
+/*This for in navbar ourbranches ul  width styling*/
+.firstrow{
+  width: 50px;
+
+}
+
+/*This for nav bar ul li styling like font size and float and position*/
+.headersectionsecondone div ul li {
+  width: 500px;
+  position: relative; 
+  font-size: 15px;
+  float: left;
+}
+/* This for in navbar typeoftests div as ul and li  as seperate ul for each  */
+/*test for example clinical biochemistry as seperate list it as ul and li this styling belongs that ul*/
+.subdropdownmenu{
+  margin-left: 10px;
+}
+/* This css belongs  navbar typeof tests li*/
+.rowsecond{
+  margin-left: 280px;
+  margin-top: -280px;
+  
+}
+/* This css belongs  navbar typeof tests li*/
+.rowThird{
+  margin-left: 280px;
+  margin-top: -210px;
+}
+/* This css belongs  navbar typeof tests li*/
+.rowfourth{
+  margin-left: 280px;
+  margin-top: -130px;
+}
+/*This for navbar ul styling like z-index min-width  and position*/
+.headersectionsecondone > div > ul {
+  display: none; /* Hide these top-level dropdowns initially */
+  position: absolute; /* Take them out of flow */
+  background-color: white;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 10px 5px;
+  margin-top: 5px; /* Adjust spacing from the parent div */
+  z-index: 1001; /* Higher z-index to be above nested lists if needed */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  /* Adjust left/right positioning as needed */
+  left: 0; /* Or adjust to center/right */
+  min-width: 200px; /* Ensure enough width for content */
+}
+
+/*This part is for navbar Make main menu items relative for their dropdowns */
+.headersectionsecondone > div {
+  position: relative; 
+}
+/* This part is for navbar Show main dropdowns on hover */
+.headersectionsecondone > div> ul {
+  display: block; 
+}
+
+/* Specific styling for the 'Type of Tests' li for clearer dropdown */
+/* Adjust if the order changes You might want specific positioning for this one if it's wide */
+.headersectionsecondone > div:nth-child(4) > ul { 
+  left: 50%;
+  transform: translateX(-50%); /* Center it */
+}
+
+/* Styling for the container that holds "Types of Tests" and its dropdown */
+.tests-dropdown-container {
+  position: relative; /* Essential for positioning the absolute dropdown */
+  display: inline-block; /* Allows the div to wrap its content */
+  cursor: pointer; /* Indicates it's clickable */
+}
+
+/* Styling for the dropdown menu itself (the nested ul) */
+.tests-dropdown-container .dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position it directly below the "Types of Tests" text */
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0; /* Remove default ul margin */
+}
+
+/* Style the individual li items in the dropdown */
+.tests-dropdown-container .dropdown-menu li {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+/* Change color of dropdown links on hover */
+.headersectionsecondone div{
+  font-weight: bold;
+  font-size: 22px;
+  padding-left: 32px;
+  color: #ffffff;
+}
+
+/*This part of css for packages component main div */
+.packages{
+  margin-top: 50px;
+  
+}
+/*This part of css for whatmakeusdifferent component main div */
+.section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 50px;
+  
+}
+/*This part of css for whatmakeusdifferent component workinghours contctdetsils bookanappiontment */
+#inside_order_list{
+  font-size: 15px;
+}
+/*This part of css is for carousel image slider styling*/
+#sliderimamage{
+  width: 500px;
+   height: 450px;
+  object-fit: cover;
+   margin-left:25px;
+   margin-right:30px  
+}
+
+/* General container for the sections if they are close to each other */
+.section {
+  display: flex; /* Or display: block if you want them stacked */
+  flex-direction: row; /* Stacks them vertically */
+  gap: 10px; /* Adds space between them */
+  align-items: flex-start; /* Aligns them to the start */
+}
+
+/* Base styles for the clickable headers */
+#workinghours,
+#contactdetails,
+#book_a_appointment {
+  color: #ffffff;
+  padding: 15px 25px;
+  width: 500px; /* Fixed width */
+  background-color: #3D6889; /* Default for working hours */
+  cursor: pointer;
+  /* Removed transform from default state */
+  transition: background-color 0.3s ease-out;
+  overflow: hidden; /* Important for hiding content when max-height is 0 */
+  /* Set a min-height to ensure the header is always visible */
+  min-height: 50px; /* Adjust as needed for your header text */
+  box-sizing: border-box; /* Include padding in width/height */
+  position: relative; /* Needed for positioning child content if not in flow */
+  z-index: 1; /* Ensures header is above expanded content if positioned absolutely */
+}
+
+/* Specific background color for contact details */
+#contactdetails {
+  background-color: #4d79ff;
+}
+
+/* Styles when the section is expanded */
+#workinghours.expanded-up,
+#contactdetails.expanded-up,
+#book_a_appointment.expanded-up {
+  background-color: #3D6889; /* Keep consistent or change as desired */
+  /* Removed transform here, as it's causing the issue.
+     The expansion will be handled by max-height on the content list. */
+}
+
+/* Remove the ::before pseudo-elements if they are not serving a direct purpose
+ for the accordion expansion itself, as they can interfere with layout.
+ If you need them for other effects (like tooltips), you'll need
+ to manage their positioning carefully within the accordion context.
+*/
+#workinghours::before,
+#contactdetails::before,
+#book_a_appointment::before {
+  /* Set display to none or remove completely if not needed for accordion */
+  display: none;
+}
+
+
+/* Styles for the content lists (the expandable part) */
+.working-hours-list,
+.contact-details-list,
+.Book-a-appointment-list{
+  max-height: 0; /* Hidden by default */
+  overflow: hidden; /* Hides content when max-height is 0 */
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+  padding-top: 0; /* No top padding when collapsed */
+  opacity: 0; /* Start invisible */
+  list-style: none; /* Remove default list bullets */
+  margin: 0; /* Remove default list margins */
+  padding-left: 0; /* Remove default list padding */
+  color: #fff; /* Example color for expanded text */
+}
+/*This part of css for whatmakeusdifferent component workinghours li contactdetails li bookanappiontment li */
+.working-hours-list li,
+.contact-details-list li,
+.Book-a-appointment-list li
+ {
+  padding: 5px 0; /* Adjust padding for list items */
+  font-size: 0.9em;
+}
+
+
+/* When the parent is expanded, show the content */
+#workinghours.expanded-up .working-hours-list,
+#contactdetails.expanded-up .contact-details-list,
+#book_a_appointment.expanded-up .book-a-appointment-list {
+  max-height: 200px; /* A height larger than your content. Adjust as needed. */
+  padding-top: 15px; /* Add some space above the list when expanded */
+  opacity: 1; /* Make visible */
+}
+/*This part of css for whatmakeusdifferent component  bookanappiontment */
+#book_a_appointment{
+
+  background-color:#1ac6ff;
+}
+/*This part of css for whatmakeusfifferent heading text */
+#secondherosectionheading{
+  color: #3D6889;
+  font-size: 35px;
+  font-family: sans-serif;
+}
+/*This part of css for whatmakeusfifferent heading below text */
+#textone{
+  color: #3D6889;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+
+}
+/*This part of css for whatmakeusfifferent  component image and images about quality lab features miain div's */
+.somefeatures_what_makes_us_differentcmnt{
+  margin-top: -410px;
+  display: flex;
+}
+/*This part of css for whatmakeusfifferent  component  div's */
+.somefeatures_what_makes_us_differentcmnt ,div{
+  
+  flex-direction: row;
+  justify-content: right;
+  padding-right: 20px;
+ 
+}
+/*This part of css for whatmakeusfifferent  component  second div*/
+/*two images professional staff and qualified techinicans */
+.somefeatures_what_makes_us_differentcmnttwo{
+  
+   display: flex;
+}
+/* this part of css two images  divs professional staff and qualified techinicans */
+.somefeatures_what_makes_us_differentcmnttwo,div{
+   flex-direction: row;
+ 
+}
+/*This part of css for whatmakeusfifferent  component  second div*/
+#wtmksdffrnctwo{
+  width: 500px;
+  height: 450px;
+
+  padding-bottom: 50px;
+}
+/* This part of css belongs to whatmakeusdifferent component heading third para text */
+#texttwo{
+  color: #3D6889;
+  display: block;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-size: 17px;
+}
+
+.dffpckg{
+  display: flex;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-size: 17px;
+}
+
+/* packages component second div*/
 .sectionOne{
   display: flex;
   flex-direction: column;
   align-items: center;
   font-weight: bold;
   font-size: 28px;
+  margin-left: 15px;
   background-color:#4d79ff ;
 
 }
+/* packages component  first heading*/
 #one{
   color:#ffff00 ;
 }
+/* packages component  second heading*/
 #two{
   color: #ffffff;
 }
+/* packages component  third heading*/
 #three{
   color: #ffffff;
 }
+/*This css belongs to packagws component price attribute  background div color*/
 .pricesection{
   background-color:#4d79ff ;
 }
-.test{
+/* packagesection component background color*/
+.test {
+  
   background-color:#88cc00 ;
- 
 }
+/*bookatest button css*/
+#bookatestbuton{
+  margin-left: 0px;
+  margin-right: 150px;
+}
+/* deprecated
 .testbooking{
- display: flex;
-  margin-left: 350px;
-  margin-right: 350px;
-  padding-top: 85px;
-  padding-bottom: 25px;
-}
+  display: flex;
+   margin-left: 350px;
+   margin-right: 350px;
+   padding-top: 85px;
+   padding-bottom: 25px;
+ }
+ */
+ /* deprecated
 #headcontent{
   background-color: #33ff99;
   width:1240px;
@@ -60,6 +378,8 @@
   font-size: 15px;
   padding: 5px;
 }
+*/
+/* dwprecated
 #more-content{
   margin-left: 58px;
   background-color: #ffffff;
@@ -67,9 +387,13 @@
   font-weight: bold;
   font-size: 15px;
 }
+*/
+/* deprecated
 .maincontainer{
   margin-bottom: -550px;
 }
+*/
+/* This css belongs herocomponent main container*/
 .herosection {
   background-color: #f8f9fa; /* Light grey background */
 }
@@ -81,17 +405,1179 @@ img#hrosctimg {
   object-fit: cover; 
 
 }
+/*footer section background color */
+footer {
+  background-color: #d2dae0 ;
+}
+/* this part of css is for footer section text color*/
+.section,div{
+  flex-direction: row;
+  color: black;
+}
 
-@media (max-width: 767.98px) { /* Small devices (portrait phones, less than 768px) */
-  .herosection .card-title {
-    font-size: 1.25rem !important; /* Smaller title on mobile */
+/*test component*/
+.whatmakesdifferentsectioncardsContainer{
+  width:1320px;
+  height: 650px;
+  /*background-color:#c5d6e7;*/
+  background-image: url('./assets/backgroundimage.jpg') ;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  
+}
+.boxes-container-one {
+ display: flex;
+ margin-right: 150px;
+ margin-top: 100px;
+
+ 
+}
+
+.boxes-container-one div{
+  flex-direction: row;
+ 
+  background-color: #88cc00;
+  margin-right: 25px;
+  width: 220px;
+  height:120px;
+  padding: 25px;
+  box-shadow: 9px 9px rgb(35, 36, 34);
+
+ 
+ 
+}
+
+.boxes-container-two {
+ display: flex;
+ margin-top: 100px;
+ margin-right: 350px;
+
+}
+.boxes-container-two  div{
+
+  flex-direction: row;
+  background-color: #88cc00;
+   width: 220px;
+   height: 120px;
+   margin-right: 25px;
+   padding: 45px;
+   box-shadow: 9px 9px rgb(35, 36, 34);
+
+}
+
+.boxes-container-one div:hover {
+
+  background-color: #d9ee1f;
+
   }
-  .herosection .card-text {
-    font-size: 0.9rem !important; /* Smaller text on mobile */
+.boxes-container-two div:hover {
+
+ background-color: #d9ee1f;
+ }
+ /*
+.mb-4:hover{
+  background-color: #d9ee1f
+}
+*/
+@media (max-width: 767.98px) {
+  /* Adjust layout for the first section on mobile */
+  .sectionfirstone {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px;
+    
+  }
+
+  .sectionfirstone div {
+    margin-bottom: 5px; /* Add some space between stacked items */
+  }
+
+  /* Adjust layout for the navbar container on mobile */
+  .navbar-container {
+    width: 550px;
+  }
+
+  /* Show and style the mobile menu icon */
+  .mobileresponsivenavbaricon {
+    display: block; /* Make the icon visible */
+    font-size: 1.5rem; /* Adjust icon size */
+    cursor: pointer;
+    align-self: flex-end; /* Align to the right within the flex container */
+    margin-bottom: 10px; /* Space between icon and menu when open */
+    color: #333; /* Icon color */
+  }
+
+  /* Hide the main navigation links by default on mobile */
+  .headersectionsecondone {
+    display: none; /* Hide the entire navigation section */
+    flex-direction: column; /* Stack items vertically when active */
+    align-items: flex-start; /* Align text to the left */
+    width: 300px;
+    height: 700px; /* Take full width of the screen */
+    background-color: #fff; /* Ensure background for the dropdown menu */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Add shadow for a dropdown effect */
+    position: absolute; /* Position below the icon */
+    top: 60px; /* Adjust this value based on the height of your icon and container padding */
+    left: 0;
+    z-index: 15; /* Ensure it appears above other content */
+    border-radius: 5px; /* Match dropdowns for consistent look */
+    overflow: hidden; /* For rounded corners */
+  }
+
+  /* Show the main navigation links when the 'mobile-active' class is present */
+  .headersectionsecondone.mobile-active {
+    display: flex; /* Make the navigation visible */
+  }
+  .rowsecond{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 5px;
+    
+  }
+  .rowThird{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-left: 0px;
+  }
+  .rowfourth{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-left: 5px;
+   
+  }
+  .herosection{
+    width: auto;
+    height: auto;
+  }
+
+  /* Style individual navigation items for mobile */
+  .headersectionsecondone .nav-item {
+    width: 100%; /* Full width for better touch targets */
+    padding: 12px 20px; /* More padding for easier tapping */
+    border-bottom: 1px solid #eee; /* Separator between items */
+    text-align: left; /* Align text to the left */
+  }
+
+  .headersectionsecondone .nav-item:last-child {
+    border-bottom: none; /* No border for the last item */
+  }
+
+  /* Adjust dropdowns within the mobile menu to flow naturally */
+  .dropdown ul {
+    position: static; /* Remove absolute positioning; let them flow in document */
+    box-shadow: none; /* Remove shadow for sub-menus */
+    background-color: #f9f9f9; /* Lighter background for sub-items */
+    /* min-width: unset; */ /* Removed as it was causing the narrow issue */
+    width: 100%; /* Ensure it takes full width of its parent */
+    border-radius: 0; /* Remove rounded corners */
+    padding-left: 20px; /* Indent sub-items */
+    /* width: 100%; */ /* Already added above, keeping for clarity */
+
+    /* NEW: Add scrollbar for dropdowns on mobile */
+    max-height: 200px; /* Set a maximum height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .dropdown ul li {
+    border-bottom: none; /* No border for sub-items */
+    padding: 8px 0; /* Smaller padding for sub-items */
+    width: 100%; /* Ensure list items also take full width */
+  }
+
+  /* Further indent sub-sub-items */
+  .subdropdownmenu {
+    padding-left: 40px;
+  }
+ #workinghours{
+  width: 850px;
+  font-size: 12px;
+  margin-left: -80px;
+ }
+ #contactdetails{
+  width: 250px;
+  
+ }
+ .contact-details-list{
+  font-size: 11px;
+ }
+
+ #book_a_appointment{
+  width: 850px
+ }
+ .working-hours-list{
+  font-size: 11px;
+ }
+ .test {
+  width: 880px;
+ 
+ }
+.text-light {
+
+  width:880px;
+
+}
+.sectionOne{
+  margin-left: 22px;
+}
+  .body{
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
-/* In your App.css or a dedicated CSS file */
-.body{
+/*Media queries for small screen  or mobile devices */
+@media screen and (max-width: 767px) {
+  /* This part of css is for log logo phonenumber and email section top of navbar*/
+  .sectionfirstone{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 150px;
+    height:150px;
+    background-color :#ffffff;
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+  .whatmakesdifferentsectioncardsContainer{
+    width:150px;
+    height: 1080px;
+    margin-bottom: 88px;
+   }
+    .boxes-container-one,.boxes-container-two{
+      display: block;
+      margin-bottom: 15px;
+      flex-direction: column;
+      padding-bottom: 11px;
+    }
+    .boxes-container-two {
+      margin-top: -5px;
+      margin-bottom: 35px;
+    }
+    .boxes-container-one ,.boxes-container-two {
+       margin-bottom: 11px;
+      
+  
+    }
+    .boxes-container-one div:hover {
+
+      background-color: #d9ee1f;
+    
+      }
+    .boxes-container-two div:hover {
+    
+     background-color: #d9ee1f;
+     }
+    
+  .sectionfirstone,div{
+    font-size: 18px;
+    
+  }
+ 
+  .body{
   overflow-x: hidden;
   overflow-y: hidden;
 }
+}
+/*Media queries for small screen  or mobile devices */
+@media (min-width: 280px) and (max-width: 320px){
+ #mainlogo{
+  width:280px;
+  margin-left:-40px;
+  margin-right: 5px;
+  
+ }
+ .navbar-container{
+  width: 320px;
+  margin-left: -45px;
+  background-color: #33adff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+ }
+ .svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  padding-left: 300px;
+ }
+ .headersectionsecondone{
+  margin-top: 160px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+ }
+ .section{
+  display: flex;
+  flex-direction: column;
+ }
+#workinghours{
+  width:320px;
+  
+}
+#contactdetails{
+  width:320px;
+  margin-left: -80px;
+}
+#book_a_appointment{
+  width:320px;
+  margin-left:-80px
+}
+.whatmakesdifferentsectioncardsContainer{
+  width:850px
+ }
+  .boxes-container-one,.boxes-container-two{
+    display: flex;
+  }
+  .boxes-container-one {
+    flex-direction: column;
+    
+
+  }
+  .boxes-container-two div{
+    flex-direction: column;
+    
+
+  }
+
+ .somefeatures_what_makes_us_differentcmnt,.somefeatures_what_makes_us_differentcmnttwo{
+  margin-left: 190px;
+  font-size: 8px;
+ }
+ .somefeatures_what_makes_us_differentcmnt,p{
+
+  font-size: 8px;
+ }
+ #affprc,#hpycstmrs,#opndtwfursv{
+  width:30px
+ }
+ .packages{
+   margin-top: 150px;
+   width: 380px;
+   margin-left: -40px;
+ }
+ .card{
+  margin-left: -85px;
+ }
+ .test {
+  width: 320px;
+  margin-top: 5px;
+  padding-left: 75px;
+  margin-left: -25px;
+ }
+.text-light {
+  margin-left: -28px;
+  width:320px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.feedback-card  {
+ margin-right: -25px;
+ margin-left: -45px;
+}
+#wtmksdffrnctwo{
+  width:200px;
+  height:500px;
+  margin-right: 20px;
+}
+ .body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+ }
+ #root{
+  overflow-y: hidden;
+ }
+}
+/*Media queries for small screen  or mobile devices */
+@media (min-width: 320px) and (max-width: 658px){
+  .examplecarouselimagesection{
+    width: 780px;
+   }
+   #sliderimamage{
+    width: 880px;
+     height: 280px;
+     object-fit: cover;
+    margin-left: -490px;
+    margin-right: 180px;
+    padding-left: -80px;
+    padding-right: 100px;
+    margin-bottom: 2px;
+    
+  }
+  .boxes-container-one,.boxes-container-two{
+    display: flex;
+    gap:5px;
+    margin-right: 55px;
+    margin-left: -55px;
+  }
+ .herosection{
+  width: 780px;
+  padding: 0px;
+ }
+ #bookatestbuton{
+  margin-left: 3px;
+  margin-right: 2px;
+}
+  #root{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+}
+/*Media queries for small screen  or mobile devices */
+@media (min-width: 393px) and (max-width: 786px){
+  #mainlogo{
+    width:280px;
+    margin-left:-40px;
+    margin-right: 5px;
+    
+   }
+   .navbar-container{
+    width: 360px;
+    margin-left: -45px;
+    background-color: #33adff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    padding-left: 220px;
+   }
+   .headersectionsecondone{
+    margin-top: 160px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   .whatmakesdifferentsectioncardsContainer{
+    width:180px;
+    
+    
+  }
+   .section{
+    display: flex;
+    flex-direction: column;
+   }
+  #workinghours{
+    width:320px;
+    
+  }
+  #contactdetails{
+    width:320px;
+    margin-left: -80px;
+  }
+  #book_a_appointment{
+    width:320px;
+    margin-left:-80px
+  }
+   
+  
+   .somefeatures_what_makes_us_differentcmnt,.somefeatures_what_makes_us_differentcmnttwo{
+    margin-left: 190px;
+    font-size: 8px;
+   }
+   .somefeatures_what_makes_us_differentcmnt,p{
+  
+    font-size: 8px;
+   }
+   #affprc,#hpycstmrs,#opndtwfursv{
+    width:30px
+   }
+   .packages{
+     margin-top: 150px;
+     width: 380px;
+     margin-left: -40px;
+   }
+   .card{
+   margin-left: 155px;
+   }
+   .test {
+    width: 390px;
+    margin-top: 5px;
+    padding-left: 75px;
+    margin-left: -25px;
+   }
+  .text-light {
+    margin-left: -28px;
+    width:350px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .feedback-card  {
+   margin-right: -25px;
+   margin-left: -45px;
+  }
+  #wtmksdffrnctwo{
+    width:200px;
+    height:500px;
+    margin-right: 20px;
+  }
+   .body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+  #root{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+}
+/*Media queries for small screen  or mobile devices */
+@media (min-width: 360px) and (max-width: 740px){
+  #mainlogo{
+    width:280px;
+    margin-left:-40px;
+    margin-right: 5px;
+    
+   }
+   .navbar-container{
+    width: 320px;
+    margin-left: -45px;
+    background-color: #33adff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    padding-left: 320px;
+    
+   }
+   .headersectionsecondone{
+    margin-top: 160px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   .section{
+    display: flex;
+    flex-direction: column;
+   }
+  #workinghours{
+    width:320px;
+    
+  }
+  #contactdetails{
+    width:320px;
+    margin-left: -80px;
+  }
+  #book_a_appointment{
+    width:320px;
+    margin-left:-80px
+  }
+   
+  
+   .somefeatures_what_makes_us_differentcmnt,.somefeatures_what_makes_us_differentcmnttwo{
+    margin-left: 190px;
+    font-size: 8px;
+   }
+   .somefeatures_what_makes_us_differentcmnt,p{
+  
+    font-size: 8px;
+   }
+   #affprc,#hpycstmrs,#opndtwfursv{
+    width:30px
+   }
+   .packages{
+     margin-top: 150px;
+     width: 380px;
+     margin-left: -40px;
+   }
+   .card{
+    margin-left: -85px;
+   }
+   .examplecarouselimagesection{
+    width: 780px;
+   }
+   #sliderimamage{
+    width: 880px;
+     height: 280px;
+     object-fit: cover;
+    margin-left: -490px;
+    margin-right: 180px;
+    padding-left: -80px;
+    padding-right: 100px;
+    margin-bottom: 2px;
+    
+  }
+
+ .herosection{
+  width: 780px;
+  padding: 0px;
+ }
+ #bookatestbuton{
+  margin-left: 6px;
+  margin-right: 5px;
+}
+   .test {
+    width: 350px;
+    margin-top: 5px;
+    padding-left: 75px;
+    margin-left: -25px;
+   }
+  .text-light {
+    margin-left: -28px;
+    width:320px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .feedback-card  {
+   margin-right: -25px;
+   margin-left: -45px;
+  }
+  #wtmksdffrnctwo{
+    width:200px;
+    height:500px;
+    margin-right: 20px;
+  }
+   .body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+  #root{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+}
+/*Media queries for small screen  or mobile devices */
+@media (min-width: 353px) and (max-width: 745px){
+  #mainlogo{
+    width:280px;
+    margin-left:-40px;
+    margin-right: 5px;
+    
+   }
+   .navbar-container{
+    width: 320px;
+    margin-left: -45px;
+    background-color: #33adff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    padding-left: 120px;
+   }
+   .headersectionsecondone{
+    margin-top: 160px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   .section{
+    display: flex;
+    flex-direction: column;
+   }
+  #workinghours{
+    width:320px;
+    
+  }
+  #contactdetails{
+    width:320px;
+    margin-left: -80px;
+  }
+  #book_a_appointment{
+    width:320px;
+    margin-left:-80px
+  }
+   
+  
+   .somefeatures_what_makes_us_differentcmnt,.somefeatures_what_makes_us_differentcmnttwo{
+    margin-left: 190px;
+    font-size: 8px;
+   }
+   .somefeatures_what_makes_us_differentcmnt,p{
+  
+    font-size: 8px;
+   }
+   #affprc,#hpycstmrs,#opndtwfursv{
+    width:30px
+   }
+   .packages{
+     margin-top: 150px;
+     width: 380px;
+     margin-left: -40px;
+   }
+   .card{
+    margin-left: -85px;
+   }
+   .test {
+    width: 350px;
+    margin-top: 5px;
+    padding-left: 75px;
+    margin-left: -25px;
+   }
+  .text-light {
+    margin-left: -28px;
+    width:320px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .feedback-card  {
+   margin-right: -25px;
+   margin-left: -45px;
+  }
+  #wtmksdffrnctwo{
+    width:200px;
+    height:500px;
+    margin-right: 20px;
+  }
+   .body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+  #root{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+}
+
+/*Media queries for small screen devices  */
+@media (min-width: 240px) and (max-width: 320px){
+  #mainlogo{
+    width:280px;
+    margin-left:-40px;
+    margin-right: 5px;
+    
+   }
+   .navbar-container{
+    width: 220px;
+    margin-left: -45px;
+    background-color: #33adff;
+   
+   }
+   .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    padding-left: 120px;
+   }
+   .headersectionsecondone{
+    margin-top: 160px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   .section{
+    display: flex;
+    flex-direction: column;
+   }
+  #workinghours{
+    width:320px;
+    
+  }
+  #contactdetails{
+    width:320px;
+    margin-left: -80px;
+  }
+  #book_a_appointment{
+    width:320px;
+    margin-left:-80px
+  }
+   
+  
+   .somefeatures_what_makes_us_differentcmnt,.somefeatures_what_makes_us_differentcmnttwo{
+    margin-left: 190px;
+    font-size: 8px;
+   }
+   .somefeatures_what_makes_us_differentcmnt,p{
+  
+    font-size: 8px;
+   }
+   #affprc,#hpycstmrs,#opndtwfursv{
+    width:30px
+   }
+   .packages{
+     margin-top: 150px;
+     width: 380px;
+     margin-left: -40px;
+   }
+   .card{
+    margin-left: -85px;
+   }
+   .test {
+    width: 300px;
+    margin-top: 5px;
+    padding-left: 30px;
+    margin-left: -25px;
+   }
+  .text-light {
+   
+    width:280px;
+    margin-left: -75px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .feedback-card  {
+   margin-right: -25px;
+   margin-left: -45px;
+  }
+  #wtmksdffrnctwo{
+    width:200px;
+    height:500px;
+    margin-right: 20px;
+  }
+   .body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+  #root{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+}
+
+/*Media queries for small screen devices  */
+@media (min-width: 280px) and (max-width: 655px){
+  .navbar-container{
+    width: 280px;
+    
+   }
+   .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    margin-left: 50px;
+   
+   }
+   .examplecarouselimagesection{
+    width: 780px;
+   }
+   #sliderimamage{
+    width: 880px;
+     height: 280px;
+     object-fit: cover;
+    margin-left: -490px;
+    margin-right: 180px;
+    padding-left: -80px;
+    padding-right: 100px;
+    margin-bottom: 2px;
+    
+  }
+
+ .herosection{
+  width: 780px;
+  padding: 0px;
+ }
+  .test {
+    width: 345px;
+    margin-top: 5px;
+    padding-left: 55px;
+    padding-right: 52px;
+   
+   }
+   .boxes-container-one,.boxes-container-two{
+    display: flex;
+    gap:5px;
+    margin-right: 55px;
+    margin-left: -55px;
+    margin-top: 2px;
+  }
+  @media (min-width: 393px) and (max-width: 787px){
+    .test {
+      width: 410px;
+      margin-top: 5px;
+      padding-left: 58px;
+      margin-left: -28px;
+     }
+    .text-light {
+    
+    width:449px;
+  }
+  .boxes-container-one div:hover {
+
+    background-color: #d9ee1f;
+  
+    }
+  .boxes-container-two div:hover {
+  
+   background-color: #d9ee1f;
+   }
+  
+   }
+   /*bookatest button css*/
+#bookatestbuton{
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+  .text-light {
+    margin-left: -68px;
+    width:400px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  #root{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+  
+}
+/*Media queries for small screen devices  */
+@media (min-width: 360px) and (max-width: 640px){
+ 
+   
+   .navbar-container{
+    width: 320px;
+    margin-left: 2px;
+   
+   
+   }
+   .svg-inline--fa {
+   
+    padding-left: 228px;
+   } #bookatestbuton{
+    margin-left: 2px;
+    margin-right: 28px;
+  }
+
+ .whatmakesdifferentsectioncardsContainer{
+  width:850px
+ }
+  .boxes-container-one,.boxes-container-two{
+    display: flex;
+    gap:5px;
+    margin-right: 55px;
+    margin-left: -55px;
+  }
+  .boxes-container-one div{
+    flex-direction: column;
+    
+
+  }
+  .boxes-container-two div{
+    flex-direction: column;
+
+  }
+ 
+   .test {
+    width: 369px;
+    margin-top: 5px;
+    padding-left: 96px;
+    margin-left: 9px;
+   }
+  .text-light {
+    
+    width:425px;
+  
+  }
+}
+  #root{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   }
+   /*Media queries for Desktop devices*/
+   @media only screen and (min-width: 1190px){
+    .py-5{
+      width: 1400px;
+    }
+    .text-light {
+    
+   margin-left: -22px;
+    
+    }
+   }
+   @media (min-width: 412px) and (max-width: 950px){
+    .test {
+      width: 410px;
+      margin-top: 5px;
+      padding-left: 58px;
+      margin-left: -28px;
+     }
+    .text-light {
+      
+      width:450px;
+    
+    }
+    .boxes-container-one div:hover {
+
+      background-color: #d9ee1f;
+    
+      }
+    .boxes-container-two div:hover {
+    
+     background-color: #d9ee1f;
+     }
+    
+   }
+   @media (min-width: 393px) and (max-width: 787px){
+    .test {
+      width: 410px;
+      margin-top: 5px;
+      padding-left: 58px;
+      margin-left: -28px;
+     }
+    .text-light {
+    
+    width:449px;
+  }
+  .boxes-container-one div:hover {
+
+    background-color: #d9ee1f;
+  
+    }
+  .boxes-container-two div:hover {
+  
+   background-color: #d9ee1f;
+   }
+  
+   }
+   @media (min-width: 375px) and (max-width: 918px){
+   
+  .boxes-container-one div:hover {
+
+    background-color: #d9ee1f;
+  
+    }
+  .boxes-container-two div:hover {
+  
+   background-color: #d9ee1f;
+   }
+  
+   }
+   @media (min-width: 912)and (max-width: 1280px){
+    .sectionfirstone{
+      margin-left: -55px;
+      margin-right: 28px;
+      width: 100px;
+      height:100px;
+      background-color :#ffffff;
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+   
+      
+    }
+    .sectionfirstone,div{
+      font-size: 22px;
+      
+      
+    }
+    /* This part of css is for navbar outside stying*/
+    .headersectionsecondone{
+      margin-left: -98px;
+      margin-right: 18px;
+      width: 800px;
+      height:100px;
+      padding: 8px;
+    }.headersectionsecondone div{
+       padding: 7px;
+    }
+    #workinghours{
+      width:320px;
+      margin-left: -68px;
+    
+    }
+    #contactdetails{
+      width:320px;
+      margin-left: -10px;
+    }
+    #book_a_appointment{
+      width:450px;
+      margin-left:-10px
+    }
+     /* still need to change
+    .card{
+ 
+   
+     
+     }
+     */
+     
+    .test{
+      width: 1000px;
+      margin-left: -133px;
+    }
+    .text-light {
+    margin-left: -85px;
+    width:1000px;
+  }
+}
+  @media (min-width: 393px) and (max-width: 787px){
+    .test {
+      width: 410px;
+      margin-top: 5px;
+      padding-left: 58px;
+      margin-left: -28px;
+     }
+    .text-light {
+    
+    width:449px;
+  }
+  .boxes-container-one div:hover {
+
+    background-color: #d9ee1f;
+  
+    }
+  .boxes-container-two div:hover {
+  
+   background-color: #d9ee1f;
+   }
+  
+  }
+
+  
+
+   @media (min-width:820px) and (max-width:1180px ) {
+    .sectionfirstone{
+      width:500px;
+      margin-left: -40px;
+    }
+    .headersectionsecondone{
+      margin-top: 2px;
+      width:830px;
+      margin-left: -105px;
+     
+    }
+    #workinghours{
+      margin-left: -80px;
+      width:220px
+    }
+    #contactdetails{
+      width:250px;
+      margin-left: -10px;
+    }
+    #book_a_appointment{
+      width: 280px;
+      margin-right: 520px;
+    }
+    .whatmakesdifferentsectioncardsContainer{
+      width:1320px;
+      height: 680px;
+      margin-bottom: 88px;
+     }
+    .boxes-container-one,.boxes-container-two{
+      display: flex;
+      gap:5px;
+      margin-right: 20px;
+      margin-left: -20px;
+      
+    }
+    .boxes-container-one {
+      display: inline-block;
+    
+      
+    }
+    .boxes-container-two {
+      display:inline-block;
+      margin-bottom: 2px;
+    }
+    .boxes-container-one div:hover {
+
+      background-color: #d9ee1f;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    
+      }
+    .boxes-container-two div:hover {
+    
+     background-color: #d9ee1f;
+     margin-top: 5px;
+     margin-bottom: 5px;
+     }
+     .test {
+      width: 850px;
+      margin-top: 5px;
+      padding-left: 58px;
+      margin-left: -28px;
+     }
+     .text-light{
+      width:870px;
+      margin-left:-50px;
+     }
+    
+   }
