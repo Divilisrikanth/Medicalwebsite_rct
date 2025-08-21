@@ -14,7 +14,7 @@ import BlogSection from './components/BlogSection';
 import WhyChooseUs from "./components/Whychoodeus";
 import Aboutus from './components/Aboutus';
 import Footer from './components/Footer';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 const blogPosts = [
@@ -25,7 +25,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <Header />
-            <Switch>
+            <Routes>
                 {/* Route for the Home Page */}
                 <Route exact path="/" element={
                     <>
@@ -39,10 +39,10 @@ const App = () => {
                         <WhyChooseUs />
                     </>
                 } />
-
+           
                 {/* Route for the About Us page */}
                 <Route exact path="/aboutus" element={<Aboutus />} />
-            </Switch>
+            </Routes>
             <Footer />
         </BrowserRouter>
     );
