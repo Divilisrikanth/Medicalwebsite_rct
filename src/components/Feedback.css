@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: center; /* Vertically center content */
     margin-bottom: 20px; /* Add some space if cards stack on smaller screens */
+    margin-left: 30px;
     transition: all 0.3s ease; /* Smooth transition for hover effects or sizing changes */
   }
   
