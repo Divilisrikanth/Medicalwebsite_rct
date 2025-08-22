@@ -13,6 +13,7 @@ import FAQ from './components/Faq.js'
 import BlogSection from './components/BlogSection';
 import WhyChooseUs from "./components/Whychoodeus";
 import Aboutus from './components/Aboutus';
+import ContactUs from './components/Contactus';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -42,6 +43,9 @@ const App = () => {
            
                 {/* Route for the About Us page */}
                 <Route exact path="/aboutus" element={<Aboutus />} />
+                <Route exact path='/packages' element={<Packagessection/>}/>
+                <Route exact path='/blog' element={<WhyChooseUs/>}/>
+                <Route exact path='/contactus' element={<ContactUs/>}/>
             </Routes>
             <Footer />
         </BrowserRouter>

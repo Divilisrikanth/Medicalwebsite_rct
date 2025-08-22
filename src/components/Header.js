@@ -184,9 +184,23 @@ const Header = () => {
               </ul>
             )}
           </div>
-          <div className="nav-item">Packages</div>
-          <div className="nav-item">Blogs</div>
-          <div className="nav-item">Contact us</div>
+          <div className="nav-item">
+            <Link to ="/packages">
+              Packages 
+            </Link>
+            
+            </div>
+          <div className="nav-item">
+            <Link to="/blog">
+              Blogs
+            </Link>
+           </div>
+          <div className="nav-item">
+            <Link to="/contactus">
+             Contact us
+            </Link>
+            
+            </div>
         </div>
       </div>
     </div>

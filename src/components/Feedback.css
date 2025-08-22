@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center; /* Vertically center content */
     margin-bottom: 20px; /* Add some space if cards stack on smaller screens */
-    margin-left: 30px;
+    margin-left: 60px;
     transition: all 0.3s ease; /* Smooth transition for hover effects or sizing changes */
   }
   
@@ -59,8 +59,11 @@
   /* --- Media Queries for Mobile View --- */
   @media (max-width: 767.98px) { /* Bootstrap's 'md' breakpoint for smaller devices */
     .feedback-card {
-        width: 650px;
-        height: 780px;
+        width: 550px;
+        height: 620px;
+        padding-left: -355px;
+        padding-right: 0px;
+
     }
   
     /* Arrows positioning for mobile */
@@ -91,7 +94,7 @@
       min-height: 200px; /* Even smaller min-height for very small phones */
       font-size: 0.9em; /* Reduce font size */
     }
-  
+    
     .feedback-arrow {
       width: 35px;
       height: 35px;
